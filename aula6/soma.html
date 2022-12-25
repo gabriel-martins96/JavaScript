@@ -11,11 +11,15 @@
         var n1, n2, soma;
         n1 = Number.parseFloat(prompt('Digite um número:'));
         n2 = Number.parseFloat(prompt('Digite outro número:'));
+        //ou a forma mais simples é simplesmente usar Number(n) -> Sem o ponto mesmo!
+        /*
+        n1 = Number(alert('Digite um número:'))
+        n2 = Number(alert('Digite outro numero: '))
+        */
         soma = n1 + n2;
-        alert('A Soma de ' + n1 + " mais " + n2 + ' = ' + soma)   
-
-        //A forma mais simples é simplesmente usar Number(n) -> Sem o ponto mesmo!
-        // n1 = Number(prompt("Digite um numero:"))
+        //alert('A Soma de ' + n1 + " mais " + n2 + ' = ' + soma)   
+        alert(`A soma de ${n1} + ${n2} é igual à ${soma}`)
+        
     </script>
 </body>
 </html>
