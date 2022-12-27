@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+      body{
+        background-color: rgb(108, 178, 202);
+        color: #FEFEFE;
+        font: arial;
+      }  
+    </style>
+</head>
+<body>
+    <h1 class="titulo-padrao">Iniciando estudos DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.   </p>
+    <div id="div1">Clique em mim</div>
+    <h2 class="titulo-padrao">Segundo titulo</h2>
+
+    <script>
+      //A)Seletor por marca (tag):
+        var paragrafo1 = document.getElementsByTagName('p')[0];
+        document.write(paragrafo1.innerText)
+        paragrafo1.style.color = 'black'
+        //('p') e [0] diz paragrafo e que eu quero o 1º
+        var seletor1 = document.getElementsByTagName('body')[0];
+        seletor1.style.background = 'cor que quiser';
+
+        //B) por ID, Class
+        var seletor2 = document.getElementById('div1');
+        div1.style.color = 'green';
+        div1.style.fontSize = '2em';
+
+        var seletor3 = document.getElementsByClassName('titulo-padrao')[0];
+        seletor3.style.color = 'black';
+        seletor3.innerText = 'Modifiquei :p'
+
+        //Por querry
+        var seletor4 = document.querySelector('h2.titulo-padrao');
+        seletor4.style.background = 'pink'
+
+        var seletor5 = document.querySelectorAll('h1');
+        seletor5.style.background = 'green';
+
+    </script>
+</body>
+</html>
