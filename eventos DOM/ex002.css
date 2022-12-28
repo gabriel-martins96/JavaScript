@@ -1,0 +1,26 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#mostrador {
+    width: 70px;
+    padding: 10px;
+    border: 0.1px solid black;
+    display: block;
+    margin: auto;
+    background-color: rgb(198, 243, 198);
+}
+#centralizar{
+    text-align: center;
+    padding: 70px
+}
+h1, input, div {
+    margin: 20px 10px 20px 0;
+}
+input{
+    background-color: rgb(198, 243, 198);
+}
+
+body{
+    background-color: rgba(216, 188, 193, 0.609);
+}

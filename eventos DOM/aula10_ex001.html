@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos DOM</title>
     <style>
-        div#area, #entrando{
-            background-color: rgb(94, 200, 94);
+        div#area, #entrando, #div3{
+            background-color: green;
             color: #FEFEFE;
             height: 200px;
             width: 200px;
@@ -30,22 +30,50 @@
         Intereja...
     </div>
 
+    <div id="div3">
+        Intereja...
+    </div>
+
     <script>
         //Exemplo mouse click
         function clicar() {
           var seletor = document.getElementById('area')
-          seletor.style.backgroundColor = 'green'  
+          seletor.style.backgroundColor = 'red'  
         }
         //Exemplo mouse enter e out
         function entrar() {
             var seletordiv2 = document.getElementById('entrando');
             seletordiv2.innerText = 'entrou';
+            seletordiv2.style.backgroundColor = 'orange';
         }
 
         function sair() {
             var seletordiv2 = document.getElementById('entrando');
             seletordiv2.innerText = 'saiu';
+            seletordiv2.style.backgroundColor = 'green'
         }
+
+        //Treinando com listener
+        var seletordiv3 = document.getElementById('div3');
+        
+        //Criando listener
+        seletordiv3.addEventListener('click', clicar2)
+        seletordiv3.addEventListener('mouseenter', entrar2);
+        seletordiv3.addEventListener('mouseout', sair2)
+        function clicar2() {
+            seletordiv3.innerText = 'Clicou';
+            seletordiv3.style.backgroundColor = 'red';
+        }
+        function entrar2(){
+            seletordiv3.innerText = 'Entrou';
+            seletordiv3.style.backgroundColor = 'orange';
+        }
+        function sair2(){
+            seletordiv3.innerText = 'Saiu';
+            seletordiv3.style.backgroundColor = 'green';
+        }
+             
+
     </script>
 </body>
 

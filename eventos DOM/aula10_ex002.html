@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <link rel="stylesheet" href="ex002.css">
+    
+</head>
+
+<body>
+
+    <div id="centralizar">
+        <h1>Somando valores</h1>
+        <input type="number" name="txt1" id="txt1"> +
+        <input type="number" name="txt2" id="txt2">
+        <input type="button" value="Somar" onclick="somar()" id="resultado">
+
+        <div id="mostrador">Resultado</div>
+    </div>
+
+    <script>
+
+
+        var seletortxt1 = document.getElementById('txt1')
+        var seletortxt2 = document.querySelector('input#txt2')
+        var seletorsomar = document.getElementById('Somar')
+        var resultado = document.getElementById('resultado')
+        var mostrador = document.getElementById ('mostrador')
+
+        function somar() {
+            //1º Criar os acessos aos inputs
+            var txt1 = document.querySelector('input#txt1')
+            var txt2 = document.querySelector('input#txt2')
+
+            //2º Criar as variáveis para recer os valores
+            var input1 = Number(txt1.value)
+            var input2 = Number (txt2.value)
+            var soma = input1 + input2
+
+            //3º Imprimir na tela
+            mostrador.innerText = soma
+
+        }
+
+    </script>
+</body>
+
+</html>
